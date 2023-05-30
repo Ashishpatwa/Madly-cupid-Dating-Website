@@ -1,4 +1,3 @@
-# Django-Madly-cupid
 # Madly Cupid Project
 
 Welcome to the Madly Cupid project! This project is a dating website built using Django and incorporates Agora for video calling features. Madly Cupid aims to connect people and facilitate meaningful interactions.
