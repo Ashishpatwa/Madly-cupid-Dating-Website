@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Comfortaa", cursive;
+    /* background-color: #e4e4e4; */
+  background-color: white;
+  
+  
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    color: grey;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: row;
+    height: 3.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo #chat h1 {
+    margin: 0px;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 900;
+    /* color: rgb(255, 255, 255); */
+    color: rgb(250 248 248);
+    /* text-shadow: 2px 2px 1px rgba(63, 63, 63, 0.4), -2px -1px 1px rgba(181, 181, 181, 0.5); */
+    text-shadow: 1px 1px 1px rgb(63 63 63 / 50%), -1px -1px 1px rgb(181 181 181 / 65%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .logo span#fly {
+    padding: 0px 0px 0px 4px;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: Arial;
+    color: #40a8c4;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* .container{
+      background-color: rgb(194, 136, 177);  
+      height: 100vh;
+      width: 100vw;
+  
+  } */
+  .side-infomation {
+    font-size: 20px;
+  }
+  .side-infomation ul li {
+    list-style: none;
+    padding: 1.4rem 2rem;
+    cursor: pointer;
+    font-size: .95rem;
+    font-family: "Comfortaa", sans-serif, cursive;
+    color: rgb(74 74 74 / 72%);
+    font-weight: 600;
+  }
+  .side-infomation ul li:hover {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0), #40a8c4);
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .left-container {
+    position: fixed;
+    width: 15rem;
+    transition: 0.5s ease-in;
+    z-index: 1;
+    height: 100vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .right-container {
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .nav-bar {
+    height: 3.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: calc(100% - 15rem);
+    position: fixed;
+    background-color: white;
+    z-index: 9;
+  }
+  
+  .adjust {
+    height: 2rem;
+    border: 2px solid #40a8c4;
+    border-radius: 3em;
+    font-size: 20px;
+    display: flex;
+    overflow: hidden;
+    margin: 0 1rem;
+    /* width: auto; */
+  }
+  
+  .search-icon {
+    padding: 5px;
+    background-color: #40a8c4;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #search_input {
+    outline: none;
+    font-family: inherit;
+    background-color: transparent;
+    border-style: none;
+    padding-left: 6px;
+    font-size: 16px;
+  }
+  
+  .profile-logo {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    cursor: pointer;
+    border-style: double;
+    margin: 0 1rem;
+  }
+  
+  .container-icon {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-icon i {
+    margin: 0 0.5rem;
+  }
+  .container-icon i:hover {
+    color: #40a8c4;
+    cursor: pointer;
+  }
+  
+  /* .card-grp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.5rem;
+  }
+  .card-grp .card-item {
+    height: 15rem;
+    display: flex;
+    border: 2px solid rgb(112, 110, 110);
+    border-radius: 3rem 0rem;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+  .card-grp .card-item .card-img {
+    width: 15rem;
+    border-top-left-radius: 2.8rem;
+    border: 2px inset rgb(207, 207, 207);
+    overflow: hidden;
+  }
+  .card-grp .card-item .card-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .card-grp .card-item .card-detail-info {
+    padding: 1rem;
+  }
+  .card-grp .card-item .card-detail-info .card-name {
+    padding: 1rem;
+    width: 8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .card-grp .card-item .card-detail-info .card-detail {
+    display: flex;
+    text-overflow: ellipsis;
+    font-size: 18px;
+  }
+  .card-grp .card-item .card-detail-info .card-detail strong {
+    display: block;
+  }
+  .card-grp .card-item .card-detail-info .card-detail .card-left-info {
+    padding-right: 1rem;
+  }
+  .card-grp .card-item .card-detail-info .card-detail .card-right-info ul li {
+    display: block;
+    text-overflow: ellipsis;
+  }
+  .card-grp .card-item .card-detail-info .card-detail ul li {
+    padding-bottom: 0.3rem;
+    list-style: none;
+    font-size: 16px;
+  }
+  .card-grp .card-item .card-detail-info .card-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    margin-top: 1rem;
+  }
+  .card-grp .card-item .card-detail-info .card-submit button {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }# sourceMappingURL=index.css.map */

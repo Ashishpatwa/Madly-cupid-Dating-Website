@@ -1,0 +1,63 @@
+{% extends 'Home/base.html' %}
+
+{% load static %}
+
+{% block title%} Search {% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'CSS/search.css' %}" type="text/css" >
+{% endblock %}
+
+{% block content %}
+<div class="bottom">
+  <h1 class="termheader">Search</h1>
+
+    {% for user in users %}
+    
+    
+    <div class="card_container">
+        <div class="card_img"><img src="{{ user.profilepic.url }}"></div>
+        <div class="card_content">
+            <h1>{{ user.user_id.first_name }} {{ user.user_id.last_name }}</h1>
+            <div class="userabout">
+                <table>
+                    <tr>
+                        <td class="left">Age</td>
+                        <td>{{user.age}}</td>
+                    </tr>
+                    <tr>
+                        <td class="left">City</td>
+                        <td>{{user.City}}</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Gender</td>
+                        <td>{{user.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Lives in</td>
+                        <td>{{user.Lives}}</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Interested in</td>
+                        <td>{{user.Interested}}</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Relationship Status</td>
+                        <td>{{user.Relationship}}</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Looking for</td>
+                        <td>{{user.Looking}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="actions_container">
+                <div class="actions" id="user"><i class="las la-user-plus"></i></div>
+                <div class="actions" id="heart"><i class="las la-heart"></i></div>
+                <div class="actions" id="message"><i class="las la-envelope"></i></div>
+            </div>
+            <script src="{% static 'js/actions.js' %}" type="text/javascript"></script>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} 

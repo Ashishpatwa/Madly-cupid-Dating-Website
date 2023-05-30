@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/base.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/login.css' %}" type="text/css">
+
+    <title>Document</title>
+</head>
+    
+    <body>
+    <nav>
+        <div class="logo">
+            <a href="{% url 'Home' %}"><img src="{% static 'images/fun.png' %}" alt="logo"></a>
+        </div>
+        <div class="nav_container">
+            <a href="{% url 'Home' %}">Home</a>
+            <!-- <a href="#">Video call</a>
+            <a href="#">Chat Rooms</a> -->
+            <a href="{% url 'registerpage' %}">Register</a>
+        </div>
+    </nav>
+    <section class="login_page">
+        <div class="login_container">
+            <img src="{% static 'images/undraw_intense_feeling_ft9s (3).png' %}">
+            <h1>Welcome to MadlyCupid !</h1>
+            <p>Log-in to your account</p>
+            <form action="{% url 'loginpage' %}" method="POST" class="form-outline">
+                {% csrf_token %}
+                <div class="form_row">
+                    <div class="form_column">
+                        <div class="login-col" style="width: 100%;">
+                            <label for="input" class="form_label">Username</label>
+                            <input type="text" name="username" class="form-text" required>
+                        </div>
+                    </div>
+                    <div class="form_column">
+                        <div class="login-col" style="width: 100%;">
+                            <label for="input" class="form_label">Password</label>
+                            <input type="password" name="password" class="form-text" required>
+                        </div>
+                    </div>
+                    <button class="button">Login</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

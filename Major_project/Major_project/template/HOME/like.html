@@ -1,0 +1,94 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block title%} home_page {% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'CSS/search.css' %}" type="text/css" >
+<style>
+    .friend_container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+      }
+      .friend_container .friend_img {
+        height: 15rem;
+        position: relative;
+      }
+      .friend_container .friend_img img {
+        width: 100%;
+        height: 100%;
+      }
+      .friend_container .friend_img .friend_info {
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        /*-webkit-backdrop-filter: blur(4px);
+                backdrop-filter: blur(4px);*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        width: 100%;
+        height: 20%;
+        color: #575252;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .friend_container .friend_img .friend_info li {
+        list-style: none;
+      }
+
+      h1.termheader{
+        width: 100%;
+        text-align-last: center;
+        padding: 0  0 1.5rem 0;
+        font-size: 1.2rem;
+    }
+    p.terms{
+        text-align-last: center;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="bottom">
+  <h1 class="termheader">Likes</h1>
+    <div class="friend_container">
+ 
+      
+        {% if users%}
+        {% for user in users %}
+        {% if user.sender.user_id.profilepic %}
+        <a href="/profile/{{user.sender.user_id.user.username}}">
+        <div class="friend_img">
+            
+            <img src="{{user.sender.user_id.profilepic.url}}" alt="">
+            
+            <div class="friend_info">
+                <li>{{ user.sender.user_id.user.username }}</li>
+                <li>{{user.sender.user_id.age}}y, {{user.sender.user_id.gender}}</li>
+            </div>
+        </div>
+        </a>
+        {% endif %}
+        
+       
+        {% endfor %}
+    
+    
+    {% else %}
+        <li>No Notification Found</li>
+    {% endif %}
+
+        
+       
+    </div>
+
+
+</div>
+
+{% endblock content %}
+       

@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/lands.css' %}" type="text/css">
+
+    <link rel="stylesheet" href="{% static 'CSS/base.css' %}" type="text/css">
+
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="{% static 'images/fun.png' %}" alt="logo"></a>
+        </div>
+        <div class="nav_container">
+            <a href="{% url 'Home' %}">Home</a>
+            <!-- <a href="#">Video call</a>-->
+            <a href="{% url 'index' %}">Chat Rooms</a>
+            <a href="{% url 'loginpage' %}">Login</a>
+        </div>
+    </nav>
+    <section class="title_container">
+        <div class="title_details">
+            <div class="brand_name">Madly<span>Cupid</span></div>
+            <h1>Find the love of your life</h1>
+            <div class="Registration"><a href="{% url 'registerpage' %}">Registration Now</a></div>
+        </div>
+        <div class="image_container">
+            <img src="{% static 'images/istockphoto-540851800-612x612-removebg-preview.png' %}">
+        </div>
+        <div class="title_story">
+            <div class="users_active">1,09,835<span> Users</span></div>
+            <h1 class="story">We bring your life to a close</h1>
+            <div class="loginwith">------------------login or Sign-in with------------------</div>
+            <div class="login_credentials">
+                <div class="login_icons" id="google"><i class="lab la-google-plus-g"></i></div>
+                <div class="login_icons" id="facebook"><i class="lab la-facebook-f"></i></div>
+                <div class="login_icons" id="twitter"><i class="lab la-twitter"></i></div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="Top_member">
+        <h1>Top Results</h1>
+        <h3>most online members</h3>
+        <div class="top_container">
+            <div class="top_user"><img src="{% static 'images/27017.jpg' %}"><div class="content">Ashish, 21yrs</div></div>
+            <div class="top_user"><img src="{% static 'images/image6.jpg' %}"><div class="content">Rishabh, 24yrs</div></div>
+            <div class="top_user"><img src="{% static 'images/image7.jpg' %}"><div class="content">Vaishnavi, 22yrs</div></div>
+            <div class="top_user"><img src="{% static 'images/image2.jpg' %}"><div class="content">Khushi, 25yrs</div></div>
+            <div class="top_user"><img src="{% static 'images/image3.jpg' %}"><div class="content">Arpana, 21yrs</div></div>
+            <div class="top_user"><img src="{% static 'images/image7.jpg' %}"><div class="content">Krishna, 23yrs</div></div>
+
+        </div>
+    </section>
+    <section class="about_app">
+        <h1>Make a Friend Today!</h1>
+        <div class="social_container">
+            <p>The Best Social Network & Dating Site For Finding New Friends, Live Chatting And Video Calling</p>
+            <div class="imgcontainer"><img src="{% static 'images/chat_application.png' %}"></div>
+        </div>
+        
+    </section>
+    
+    <section class="servicesandfeature">
+        <div class="services_about">
+            <h1>Amazing <span>Services & Features</span> For You</h1>
+        <p>If you're thinking about how to start a conversation on a dating app, you've come to the right place.</p>
+        </div>
+        <div class="services">
+            <div class="all_services">
+                <img src="{% static 'images/981-consultation-lineal (1).gif' %}">
+                <h1>Chat Rooms</h1>
+                <p>Free Chat rooms with thousands of other people from all over the world. Choose your chat room from the various chat rooms listed here</p>
+                <a href="#">Click here</a>
+            </div>
+            <div class="all_services">
+                <img src="{% static 'images/970-video-conference-lineal (1).gif' %}">
+                <h1> Dating</h1>
+                <p>If you’re looking for love and want to start dating, or just keep it casual, you've come to the right place. You can easily meet local single users or people from all over the world.</p>
+
+                <!-- <p>If you’re looking for love and want to start dating, or just keep it casual, you've come to the right place.</p> -->
+                <a href="#">Click here</a>
+            </div>
+            <div class="all_services">
+                <img src="{% static 'images/1037-vlog-camera-lineal (1).gif' %}">
+                <h1> Video Call</h1>
+                <p>Our Video calling application connects you with a random person from all over the world. We ensure uninterrupted broadcasting and the best image quality of your chat partner!</p>
+
+                <!-- <p>Free Chat rooms with thousands of other people from all over the world. Choose your chat room from the various chat rooms listed here based on regions/countries for online chat</p> -->
+                <a href="#">Click here</a>
+            </div>
+            
+            <!-- <div class="all_services">
+                <img src="">
+                <h1>24/7 Help & Support</h1>
+                <p>Free Chat rooms with thousands of other people from all over the world. Choose your chat room from the various chat rooms listed here based on regions/countries for online chat</p>
+                <a href="#">Click here</a>
+            </div> -->
+        </div>
+        
+    </section>
+
+        <div  class="footer">
+            Copyright &copy; 2022 MadlyCupid. All Rights Reserved.
+        </div>
+        
+    
+</body>
+</html>

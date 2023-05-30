@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <nav>
+        <div class="logo">
+            <a href="index.html"><img  src="fun.png" width="41" height="41" alt="logo"></a>
+            <div id="chat"><h1>Madly </h1><span id="fly">Cupid</span></div>
+        </div>
+
+    </nav> -->
+    <form method="POST" action="form">
+        {% csrf_token %}
+    Username<input type="text" name="username" required><br><br>
+    firstname<input type="text" name="firstname" required><br><br>
+    Lastname<input type="text" name="lastname" required><br><br>
+    Age<input type="number" name="age" min="16" max="80" required><br><br>
+    <datalist>
+        <option value="13"> <option value="14"> <option value="15"> <option value="16"> <option value="17"> <option value="18"> <option value="19"> <option value="20"> <option value="21"> <option value="22"><option value="23"> <option value="24"> <option value="25"> <option value="26">  <option value="27"> <option value="28"> <option value="29"><option value="30"> <option value="31"> <option value="32"><option value="33"> <option value="34"> <option value="35"> <option value="36">  <option value="37"> <option value="38"> <option value="39"><option value="40"> <option value="41"> <option value="42"><option value="43"> <option value="44"> <option value="45"> <option value="46">  <option value="47"> <option value="48"> <option value="49"> <option value="50"> <option value="51"> <option value="52"><option value="53"> <option value="54"> <option value="55"> <option value="56">  <option value="57"> <option value="58"> <option value="59"> <option value="60"> <option value="61"> <option value="62"><option value="63"> <option value="64"> <option value="65"> <option value="66">  <option value="67"> <option value="68"> <option value="69"> <option value="70"> <option value="71"> <option value="72"><option value="73"> <option value="74"> <option value="75"> <option value="76">  <option value="77"> <option value="78"> <option value="79"> <option value="80">  
+    </datalist>
+   gender:
+    Male<input type="radio" name="gender" value="M" required>
+    Female<input type="radio" name="gender" value="F" required><br><br>
+    Password <input type="password" name="password" required><br><br>
+    Re-password <input type="password" name="Re-password" required><br><br>
+    <input type="submit" value="Sign-in" >
+    </form>
+</body>
+</html>

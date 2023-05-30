@@ -1,0 +1,38 @@
+{% extends 'Home/base.html' %}
+
+{% load static %}
+
+{% block title%} Search {% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'CSS/search.css' %}" type="text/css" >
+<style>
+    h1.termheader{
+        width: 100%;
+        text-align-last: center;
+        padding: .6rem .8rem;
+    }
+    p.terms{
+        text-align-last: center;
+    }
+</style>
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="bottom">
+
+    <h1 class="termheader">Terms and Conditions</h1>
+<p class="terms">
+    This agreement ("Agreement") is a contract between you and ("Madly cupid", "Service", "us" "our" and "we") and governs your use of the madly cupid mobile application and website services (the "Service"). By using the madly cupid services, you agree to be bound by the following Terms of Service (the "Terms of Service"), whether or not you register as a member ("Member"). We may modify this Agreement occasionally, and such modification shall be effective upon posting by us on the mobile application and website. We may update you on our changes through your email or notify you through the mobile app or website. You agree to be bound by any changes to this Agreement when you use the Service after any such modification is posted. This Agreement includes madly cupid's policy for acceptable use and content posted on the mobile application and website, your rights, obligations, and restrictions regarding your use of the mobile application and website and the Service and madly cupid's Privacy Policy.
+
+If you are under the age of 18, you may not download or use our Services. We do not knowingly collect or maintain information from children under age 18. If you are under the age of 18, you must get your parent or guardian to read and agree to our Terms of Service and Privacy Policy. Please, choose carefully the information you post on our Services and the information you provide to other Members. Your madly cupid profile may not include the following items: nude, violent or offensive images or texts. Information posted by other Service Members may contain inaccurate, inappropriate or offensive materials, products or services and madly cupid assume no responsibility or liability for this material.
+
+We reserve the right, in its sole discretion, to reject, refuse to post or remove any posts (including email) by you, or to restrict, suspend, or terminate your access to all or any part of the mobile application and website and/or Services at any time, for any or no reason, with or without prior notice, and without liability.
+We reserve the right to change these Terms of Service at any time. We will notify you through your confirmed email address or within the mobile app and website. You are responsible for keeping yourself apprised of any such changes if you dismiss these notifications. If you object to any Terms of Service or any subsequent changes or you become dissatisfied with our Services in any way, your only option is to delete your account. Your continued use of our Services after we post revised Terms of Service means that you agree to the revisions. You must be at least 18 years old to download our Services. By requesting to use, or using our Services, you represent and warrant that you are not required to register as a sex offender with any government entity.
+
+Our Services are free, but your Internet provider’s or mobile operator’s fees and rates may still apply. However, we do have in-app purchases that you can buy if you want to use some of our extra features.
+    </p>
+</div>
+{% endblock %} 

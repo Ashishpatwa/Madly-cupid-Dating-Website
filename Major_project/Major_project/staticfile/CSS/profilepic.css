@@ -1,0 +1,266 @@
+/*extra small*/
+/*small*/
+/*medium*/
+/*large*/
+@media only screen and (max-width: 1124px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr !important;
+    }
+    .left-container {
+      margin-left: -16rem;
+      transition: 0.5s ease-in;
+    }
+  }
+  .bottom_container {
+    margin-top: 3.8rem;
+    height: calc(100vh - 3.8rem);
+    width: 100%;
+    display: flex;
+    background-color: rgb(247, 245, 245);
+  }
+  .bottom_container .profile_container {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    margin: 2rem;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .bottom_container .profile_container .profile_picture {
+    align-items: center;
+    width: 20rem;
+    height: 100%;
+    background-color: rgb(186, 255, 232);
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .bottom_container .profile_container .profile_picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .bottom_container .profile_container .profile_picture .u_info {
+    height: 4rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    font-family: cursive,"Comfortaa";
+  }
+  .bottom_container .profile_container .profile_picture .u_info i {
+    font-size: 25px;
+    margin-right: 0.2rem;
+  }
+  .bottom_container .profile_container .profile_information {
+    flex: 1;
+    overflow-x: hidden;
+    display: flex;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 0;
+    scrollbar-color: rgb(213, 126, 126);
+    scrollbar-width: 2px;
+  }
+  .bottom_container .profile_container .profile_information::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  .bottom_container .profile_container .profile_information::-webkit-scrollbar-track {
+    background-color: rgba(74, 74, 74, 0.5);
+  }
+  .bottom_container .profile_container .profile_information::-webkit-scrollbar-thumb {
+    background-color: #40a8c4;
+  }
+  .bottom_container .profile_container .profile_information strong {
+    font-size: 28px;
+    color: #40a8c4;
+    font-family: cursive,"Comfortaa";
+  }
+  .bottom_container .profile_container .profile_information span {
+    margin-top: 1rem;
+    font-family: cursive,"Comfortaa";
+  }
+  .bottom_container .profile_container .profile_information .action_container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom_container .profile_container .profile_information .action_container .actions {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin: 0 0.2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: grey;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+  }
+  .bottom_container .profile_container .profile_information .action_container #user:hover {
+    transition: 0.3 ease;
+    color: white;
+    cursor: pointer;
+    background-color: #40a8c4;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.26);
+  }
+  .bottom_container .profile_container .profile_information .action_container #heart:hover {
+    color: white;
+    cursor: pointer;
+    background-color: hotpink;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.26);
+  }
+  .bottom_container .profile_container .profile_information .action_container #message:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #40c45a;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.26);
+  }
+  .bottom_container .profile_container .profile_information .action_container #call:hover {
+    color: white;
+    cursor: pointer;
+    background-color: orange;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.26);
+  }
+  .bottom_container .profile_container .profile_information .action_container #location:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #454444;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.26);
+  }
+  .bottom_container .profile_container .profile_information .user_details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-top: 1px solid rgba(128, 128, 128, 0.4);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+    margin-top: 2.5rem;
+    font-family: cursive,"Comfortaa";
+
+  }
+  .bottom_container .profile_container .profile_information .user_details .design_usr_details {
+    width: 25%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom_container .profile_container .profile_information .user_details .design_usr_details:hover {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0), #40a8c4);
+    color: white;
+  }
+  .bottom_container .profile_container .profile_information .status {
+    margin-top: 2rem;
+    width: 100%;
+    min-height: 8rem;
+  }
+  .bottom_container .profile_container .profile_information .status .status_heading {
+    font-size: 19px;
+    margin-bottom: 0.5rem;
+    color: #40a8c4;
+    font-family: cursive,"Comfortaa";
+  }
+  .bottom_container .profile_container .profile_information .status .status_about {
+    font-family: cursive,"Comfortaa";
+
+  }
+  .bottom_container .profile_container .profile_information .basic_info {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .friend_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4rem;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .friend_container .friend_img {
+    height: 12rem;
+    position: relative;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .friend_container .friend_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .friend_container .friend_img .friend_info {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    font-size: 13px;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .friend_container .friend_img .friend_info li {
+    list-style: none;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .photo_container {
+    display: flex;
+    padding: 0 4px;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .photo_container .column {
+    padding: 0 4px;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .photo_container .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .personal_details {
+    display: flex;
+    padding-left: 2rem;
+    font-family: cursive,"Comfortaa";
+
+  }
+  .bottom_container .profile_container .profile_information .basic_info .personal_info {
+    font-size: 19px;
+    margin-bottom: 1rem;
+    color: grey;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .personal_info i {
+    font-size: 23px;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .card-left-info {
+    color: #40a8c4;
+    padding-right: 2rem;
+  }
+  .bottom_container .profile_container .profile_information .basic_info .card-right-info {
+    padding-left: 1.8rem;
+  }
+  .bottom_container .profile_container .profile_information .basic_info ul li {
+    padding-bottom: 0.3rem;
+    list-style: none;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    font-family: cursive,"Comfortaa";
+
+  }
+  
+  .hide {
+    display: none;
+  }/*# sourceMappingURL=profile_pic.css.map */

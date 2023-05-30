@@ -1,0 +1,96 @@
+.login_page {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(247, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login_page .login_container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.26);
+    background-color: white;
+    width: 100%;
+    padding: 2rem 1rem 0rem;
+  }
+  .login_page .login_container p {
+    color: grey;
+  }
+  .login_page .login_container h1 {
+    font-size: 1.7rem;
+    color: rgb(71, 70, 70);
+  }
+  .login_page .login_container img {
+    width: 13rem;
+    height: auto;
+  }
+  .login_page .login_container .form-outline {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem 0 0.5rem;
+  }
+  .login_page .login_container .form-outline .form_row {
+    width: 88%;
+    margin: auto;
+  }
+  .login_page .login_container .form-outline .form_row .form_col_6 {
+    width: 45%;
+    margin: auto;
+  }
+  .login_page .login_container .form-outline .form_row .form_column {
+    display: flex;
+    padding: 0rem 0.5rem;
+  }
+  .login_page .login_container .form-outline .form_row .form_column .login_col {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .login_page .login_container .form-outline .form_row .form_column .form_label {
+    color: #696687;
+    font-size: 17px;
+    opacity: 0.7;
+  }
+  .login_page .login_container .form-outline .form_row .form_column .form-text {
+    color: rgb(71, 70, 70);
+    font-size: 18px;
+    border: 0;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 0;
+    width: 100%;
+    background: white no-repeat;
+    transition: 100ms all linear 0s;
+    background-image: linear-gradient(to bottom, rgba(244, 120, 215, 0.664) 0%, rgba(241, 87, 205, 0.664) 90%), linear-gradient(to bottom, #e1e1e1, #e1e1e1);
+    background-size: 0 2px, 100% 1px;
+    background-position: 50% 100%, 50% 100%;
+    transition: background-size 0.3s;
+  }
+  .login_page .login_container .form-outline .form_row .form_column .form-text:focus {
+    background-size: 100% 2px, 100% 1px;
+    outline: none;
+  }
+  .login_page .login_container .form-outline .form_row .button {
+    width: 50%;
+    height: 3rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(241, 87, 205, 0.664);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: white;
+    border: none;
+  }
+  

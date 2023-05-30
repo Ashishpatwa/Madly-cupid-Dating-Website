@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: white;
+  }
+  
+  nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+  }
+  nav .logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  nav .logo a {
+    margin-left: 1rem;
+  }
+  nav .logo a img {
+    width: 37px;
+    height: 37px;
+  }
+  nav .nav_container {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    font-size: 18px;
+    font-family: sans-serif;
+    
+  }
+  nav .nav_container a {
+    padding: 0 1rem;
+  }/*# sourceMappingURL=basecss.css.map */

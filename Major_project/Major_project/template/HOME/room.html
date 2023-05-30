@@ -1,0 +1,454 @@
+{% extends 'Home/base.html' %}
+
+{% load static %}
+
+{% block title%} Search {% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'CSS/search.css' %}" type="text/css" >
+<link rel="stylesheet" href="{% static 'CSS/chat.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Inter&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="chat-container">
+
+        <!-- message window -->
+        <div class="chat-window">
+
+            <!-- Header Section -->
+            <div class="chatter-box-header">
+                <div class="chat-header-lefty">
+                    <div class="main-logo"><img src="{{receiverpic.profilepic.url}}"></div>
+                    <div class="name">{{receivername.first_name}} {{receivername.last_name}}</div>
+                </div>
+
+                <div class="chat-header-righty">
+                    <i class="las la-video"></i>
+                    <i class="las la-phone-volume"></i>
+
+                    <div class="dropdown">
+                        <i class="las la-ellipsis-v"></i>
+                        <div class="dropdown-content">
+                            <li>Contact info</li>
+                            <li>Search</li>
+                            <li>Mute Notifications</li>
+                            <li>Wallpaper</li>
+                            <li>Report</li>
+                            <li>Block</li>
+                            <li>Clear Chat</li>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Display Section -->
+            <div id="chat-message-container">
+                
+                <div id="mess-cont">
+                    {% for m in messages %}
+                    {% if username == m.username %}
+                    <div class="chat-rightmessage">
+                        <div class="main-cont">
+                            <div class="chat-mess">{{ m.content }}</div>
+                        </div>
+                        <div class="h">
+                        <span class="time">{{ m.username }}</span>
+                        <i class="las la-check-double"></i>
+                        </div>
+                        
+                    </div>
+                    
+                    {% else %}
+
+                    <div class="chat-leftmessage">
+                        <div class="main-cont">
+                            <div class="chat-mess">{{ m.content }}</div>
+                        </div>
+                        <div class="h">
+                        <span class="time">{{ m.username }}</span>
+                        <i class="las la-check-double"></i>
+                        </div>
+                        
+                    </div> 
+                    {% endif %}
+                    {% endfor %}
+                </div>
+               
+                <div class="footer" id="emooji">
+                    <div class="ddc-header">
+                        <i class="las la-grin-stars"></i>
+                        <i class="las la-cloud-sun"></i>
+                        <i class="las la-hippo"></i>
+                        <i class="las la-apple-alt"></i>
+                        <i class="las la-cocktail"></i>
+                        <i class="las la-ice-cream"></i>
+                    </div>
+                    <div class="ddc-search"><input class="ddc-searching" placeholder="Search.."></div>
+                    <div class="ddc-moji"></div>
+                </div>
+
+                <div class="footer" id="trends" style="display: none;">
+                    <div class="ddc-header">
+                        <div class="ddc-name" onclick="open_gif('trending')"><i class="las la-fire"></i></div>
+                        <div class="ddc-name" onclick="open_gif('haha')">HAHA</div>
+                        <div class="ddc-name" onclick="open_gif('sad')">SAD</div>
+                        <div class="ddc-name" onclick="open_gif('love')">LOVE</div>
+                        <div class="ddc-name" onclick="open_gif('reaction')">REACTION</div>
+                        <div class="ddc-name" onclick="open_gif('sport')">SPORT</div>
+                        <div class="ddc-name" onclick="open_gif('tv')">TV</div>
+
+
+                        <!-- <i class="las la-cloud-sun"></i>
+                        <i class="las la-hippo"></i>
+                        <i class="las la-cocktail"></i>
+                        <i class="las la-ice-cream"></i> -->
+                    </div>
+                    <div class="ddc-search"><input class="ddc-searching" placeholder="Search.." id="tenor-search" onkeyup="grab_data()"></div>
+                    <div class="ddc-tenor"></div>
+                </div>
+
+                <div class="footer" id="music" style="display: none;">
+                    <div class="ddc-header">
+                        <i class="las la-grin-stars"></i>
+                        <i class="las la-cloud-sun"></i>
+                        <!-- <i class="las la-hippo"></i> -->
+                        <!-- <i class="las la-apple-alt"></i> -->
+                        <i class="las la-cocktail"></i>
+                        <i class="las la-ice-cream"></i>
+                    </div>
+                    <div class="ddc-search"><input class="ddc-searching" placeholder="Search.."></div>
+                    <div class="ddc-moji"></div>
+                </div>
+
+                
+                    
+                
+                
+
+
+                
+                <!-- <div class="chat-rightmessage">
+                    <div class="chat-mess">
+                        <div class="left-bar">
+                            <div class="mess">leftmessagmmmmmmmmmmmmmmmmmmmjjjjjjjjjjjjjjjjjjjjjjjjjhhhhhhhhhhhhhhhhhh</div>
+                        </div>
+                        <div class="right-bar">
+                            <div class="time">3:30 pm</div>
+                            <i class="las la-check-double"></i>
+                            
+                        </div>
+                    </div>
+                </div> -->
+
+
+                
+                
+                
+                
+            </div>
+
+            <!-- Input-Text Section -->
+            <!-- <div class="dropdown-cont"> -->
+
+                <div class="bottombutton">
+                    <div class="hid" >
+                        <i class="las la-laugh yyy" style="color: rgba(146, 206, 5, 0.998);" onclick="openemj('emooji')"></i>
+                        <!-- <div class="dropdown-container">
+                            <div class="ddc-header"></div>
+                            <div class="ddc-search"><input type="search" id="ddc-searching"></div>
+                            <div class="ddc-emojis"> hii are yoi</div>
+                        </div> -->
+                        
+                        <i class="lab la-hotjar emoji_comman" style="display: none;color: rgb(245, 58, 58);" onclick="openemj('trends')"></i>
+                        <i class="las la-file-audio emoji_comman"style="display: none;" onclick="openemj('music')"></i>
+                        <i class="las la-file-contract" style="color: rgba(77, 115, 237, 0.941);" ></i>
+                        <!-- <i class="las la-laugh emoji_comman" style="color: rgba(146, 206, 5, 0.998);"></i>  -->
+                        <!-- <i class="las la-microphone emoji_comman" style="color: rgb(245, 58, 58);"></i>
+                        <i class="las la-laugh emoji_comman" style="color: rgba(146, 206, 5, 0.998);"></i>
+                        <i class="las la-microphone emoji_comman" style="color: rgb(245, 58, 58);"></i> -->
+                        
+                        <!-- <i class="las la-microphone emoji_comman" style="color: rgb(245, 58, 58);"></i>
+                        <i class="las la-microphone emoji_comman" style="color: rgb(245, 58, 58);"></i> -->
+                        <input name="message-input" id="message-input" placeholder="Message...">
+                        <i class="las la-share send-btn" onclick="fun()" style="display: none;"></i>
+                        <i class="las la-microphone micro-btn" id="record" onclick="Rec_On()"></i>
+                    </div>
+                    <div class="audio" style="display: none;">
+                        <div class="audio-container">
+                            <i class="las la-trash audiores"></i>
+                            <!-- <i class="las la-play"></i> -->
+                            <audio id="recordedAudio" controls></audio>
+                            <canvas class="visualizer"></canvas>
+                            <i class="las la-pause-circle pause"></i>
+                            <i class="las la-play-circle play" style="display:none; cursor:not-allowed;"></i>
+                            <i class="las la-paper-plane Audio_Send"></i>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            <!-- </div> -->
+
+        </div>
+
+        <!-- users window -->
+        <div class="chat-menubar">
+            <div class="chat-button"><i class="las la-ellipsis-v"></i></div>
+            <div class="menubar">
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image1.jpg" ></div>
+                        <div class="logo-name">Ashish Patwa</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <!-- <i class="las la-venus"></i> -->
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image2.jpg" ></div>
+                        <div class="logo-name">Ashish Patwa</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div><div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image2.jpg" ></div>
+                        <div class="logo-name">Ashish Patwa</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div><div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image2.jpg" ></div>
+                        <div class="logo-name">Ashish Patwa</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div><div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image2.jpg" ></div>
+                        <div class="logo-name">Ashish Patwa</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image3.jpg" ></div>
+                        <div class="logo-name">Atharav Sir</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image3.jpg" ></div>
+                        <div class="logo-name">Atharav Sir</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+                
+
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image3.jpg" ></div>
+                        <div class="logo-name">Atharav Sir</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image4.jpg" ></div>
+                        <div class="logo-name">Gautam Yadav</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image5.jpg"></div>
+                        <div class="logo-name">Avanish Savita</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image6.jpg" ></div>
+                        <div class="logo-name">Harsh Srivastava</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+                <div class="chatbar">
+                
+                    <div class="leftbar">
+                        <div class="fix-logo"><img src="./image7.jpg"></div>
+                        <div class="logo-name">Ashish Patwa yadaviii singh gupta Srivastava single</div>
+                    </div>
+
+                    <div class="rightbar">
+                        <i class="lab la-stumbleupon-circle"></i>
+                        <div class="timing">33h</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="{% static 'js/render-message.js' %}"></script>
+    {{ room_name|json_script:"json-roomname" }}
+    {{ username|json_script:"json-username" }}
+    
+    <script>
+
+       
+
+        const roomName = JSON.parse(document.getElementById('json-roomname').textContent);
+        const userName = JSON.parse(document.getElementById('json-username').textContent);
+
+        const chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/chat/'
+            + roomName
+            + '/'
+          );
+          
+          chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            
+            if (data.message) {
+                fun(data);
+            } else {
+              alert('The message was empty!')
+            }
+         
+          };
+
+          chatSocket.onclose = function(e) {
+            console.error('The socket closed unexpectedly');
+          };
+
+          chatSocket.onerror = function(event) {
+            console.error("WebSocket error observed: ", event);
+          };
+          
+          document.getElementById("message-input").addEventListener("keypress", (event)=>{
+            if(event.key==="Enter")
+            {
+            const messageInputDom = document.querySelector('#message-input');
+            const message = messageInputDom.value;
+           
+            chatSocket.send(JSON.stringify({
+              'message': message,
+              'username': userName,
+              'room': roomName
+            }));
+          
+            messageInputDom.value = '';
+
+          }});
+          function fun(data){
+            val = data.message.trim();
+           
+        
+            
+            if(val != "" && val !=" "){
+                let ln =encodeURI(val);
+                const chk = ln.substring(0,6);
+                // const vl = parseInt(chk);
+                // alert(chk) %F0%9F%98%80  %F0%9F%9A%B1
+                let mc= document.getElementById("mess-cont");
+                if(ln.length<=36 && ln.length%12==0 && chk == "%F0%9F"){
+                mc.innerHTML+=`<div class="chat-rightmessage"><div class="main-cont"><div class="chat-mess"><span style="font-size: 2.1rem;">${data.message}</span></div></div><div class="h"><span class="time">${data.username}</span><i class="las la-check-double"></i></div></div>`;
+                }
+                else
+                mc.innerHTML+=`<div class="chat-rightmessage"><div class="main-cont"><div class="chat-mess">${data.message}</div></div><div class="h"><span class="time">${data.username}</span><i class="las la-check-double"></i></div></div>`;
+                let ele1 =document.getElementsByClassName("footer")[0];
+                let ele = document.getElementsByClassName("emoji_comman");
+                let var1 = getComputedStyle(ele1).getPropertyValue("display");
+                if(var1 ==="block"){
+                ele[0].setAttribute("style", "display:none;");
+                ele[1].setAttribute("style", "display:none;");
+                ele1.setAttribute("style", "display:none;");
+                mc.setAttribute("style", "height: 100%;border-bottom-left-radius: 1.5rem;border-bottom-right-radius: 1.5rem;");
+                }
+                
+        
+           
+            }
+            document.getElementById("message-input").value=""; 
+            var scroll = document.getElementById("mess-cont");
+            scroll.scrollTop = scroll.scrollHeight;
+            // var message = document.createElement('li');
+            // document.getElementById('chat-message-container').scrollTop = anchordiv.offsetHeight + anchordiv.offsetTop;
+        }
+         
+
+    </script>
+    
+{% endblock %} 
+
+

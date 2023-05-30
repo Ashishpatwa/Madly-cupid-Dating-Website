@@ -1,0 +1,29 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'CSS/404_error.css' %}" type="text/css">
+{% endblock %}
+
+{% block title%} 404_error {% endblock title %}
+{% block content %}
+<div class="bottom_container">
+    <div class="error_404">
+        <div class="error_page">
+            <div class="content">
+                <h1>Oops!</h1>
+                <h3>We can't seem to find the page you're looking for</h3>
+                <h2>Error Code: 404</h2>
+                <div class="button">
+                    <a href="{% url 'Home'%}">Back to home</a>
+                </div>
+            </div>
+            <div class="gif">
+                <img src="{% static 'images/error.png' %}">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+       

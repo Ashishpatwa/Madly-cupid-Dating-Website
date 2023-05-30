@@ -1,0 +1,86 @@
+{% extends 'Home/base.html' %}
+
+{% load static %}
+
+{% block title%} Visitors {% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'CSS/search.css' %}" type="text/css" >
+<style>
+  .friend_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  .friend_container .friend_img {
+    height: 15rem;
+    position: relative;
+  }
+  .friend_container .friend_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .friend_container .friend_img .friend_info {
+    position: absolute;
+    background-color: white;
+    /*-webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    width: 100%;
+    height: 20%;
+    color: #575252;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .friend_container .friend_img .friend_info li {
+    list-style: none;
+  }
+  h1.termheader{
+    width: 100%;
+    text-align-last: center;
+    padding: 0  0 1.5rem 0;
+    font-size: 1.2rem;
+}
+p.terms{
+    text-align-last: center;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bottom">
+  <h1 class="termheader">Visitors</h1>
+  <div class="friend_container">
+  
+
+
+      {% if unique_visitors %}
+      {% for visitor in unique_visitors %}
+      <a href="/profile/{{ visitor.username }}">
+      <div class="friend_img">
+          
+          <div class="visit_count">{{ visitor.count }} visits</div>
+          <img src="{{ visitor.profilepic }}" alt="">
+          
+          <div class="friend_info">
+              <li>{{ visitor.username }}</li>
+              <li>{{ visitor.age }}y, {{ visitor.gender }}</li>
+          </div>
+      </div>
+      </a>
+      {% endfor %}
+      {% else %}
+      <li>No Notification Found</li>
+      {% endif %}
+
+  </div>
+</div>
+
+{% endblock %} 
