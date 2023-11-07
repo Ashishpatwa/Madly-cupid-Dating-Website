@@ -2,6 +2,11 @@
 
 Welcome to the Madly Cupid project! This project is a dating website built using Django and incorporates Agora for video calling features. Madly Cupid aims to connect people and facilitate meaningful interactions.
 
+# Landing page
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/df3f62c8-3354-4a78-a9fd-7797757bd373)
+
+
 ## Setup Instructions
 
 To set up the Madly Cupid project on your local machine, please follow these steps:
