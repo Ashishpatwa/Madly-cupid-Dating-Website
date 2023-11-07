@@ -12,7 +12,8 @@ Welcome to the Madly Cupid project! This project is a dating website built using
 
 # Signup page
 
-![WhatsApp Image 2023-11-07 at 2 36 43 PM](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/6d5a132c-6662-4a03-b09c-95e7f3729c59)
+![image](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/8366aacf-7468-4126-a3d4-4e502b24ef13)
+
 
 # Home page
 
