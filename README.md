@@ -6,6 +6,62 @@ Welcome to the Madly Cupid project! This project is a dating website built using
 
 ![WhatsApp Image 2023-11-07 at 2 36 43 PM](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/df3f62c8-3354-4a78-a9fd-7797757bd373)
 
+# Login page
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (1)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/99eef194-b88f-4cfe-a790-d05418b9658e)
+
+# Signup page
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/6d5a132c-6662-4a03-b09c-95e7f3729c59)
+
+# Home page
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (4)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/953f30aa-7ff9-4856-8029-f84178bd409f)
+
+# View Profile
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (6)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/bb6094fb-a8ec-462e-9d95-0cd91fd860dd)
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (7)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/cd46f994-9c24-4e83-a1eb-2c7644c7bcf4)
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (8)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/d341b5a9-1d2a-4dbf-97c3-1a3a60586197)
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (9)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/8c37e5a7-8583-4048-8efb-2edb9094cae0)
+
+# Chating
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (11)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/69adb4c6-9695-4017-9175-19a613fa2b44)
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (5)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/cf68346b-817d-4204-877a-64049a439876)
+
+# Video calling
+
+![WhatsApp Image 2023-11-07 at 2 35 08 PM](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/b10b17ce-efcc-4078-ba14-a295583d3cd9)
+
+
+# Visitor
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (10)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/221615c5-1b3e-4621-8f54-64fa89423979)
+
+# Notification
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (12)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/14702bee-249b-4156-8bce-099b783cab38)
+
+# Likes
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (13)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/13fc0248-1ddf-4bbc-b278-d7f2c94a63a7)
+
+
+# Terms and Conditions
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (14)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/ed054703-c011-4d68-b28b-1fd37df5a7b6)
+
+
+# Privacy Policy
+
+![WhatsApp Image 2023-11-07 at 2 36 43 PM (15)](https://github.com/Ashishpatwa/Django-Madly-cupid/assets/52313013/9e230bd7-c330-49c2-a0ea-6fee95023f5d)
+
+
+
 
 ## Setup Instructions
 
